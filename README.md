@@ -50,6 +50,17 @@ Now that you have user inputs ready, you’ll move to handling peer-to-peer comm
   ```python
   # Example
   def chat_task(ctx, pipe, n, group):  # function name is chat_task
+  def get_peer_node(username): # function name is get_peer_node
+    # username = This is your username that we'll get from our get_username function
+    # This function returns something that looks like a Pyre node (my peer node?)
+  def join_group(node, group): # function name is join_group
+    group # I assume this is a group that I want to join from our get_group function
+    # node = I assume this is my peer computer node
+    # This function returns Nothing.
+  def get_channel(node, group): # function name is get_channel
+    # node = I assume this is my peer computer node
+    # group # I assume this is a group that I want to join similar to join_group
+    # This function returns a zhelper, not sure what that is, but maybe a channel!
   ```
   2. List all parameters and what you think they are. Put "UNSURE" if you don't have a guess.
   ```shell
@@ -58,6 +69,8 @@ Now that you have user inputs ready, you’ll move to handling peer-to-peer comm
   pipe: This is a communications pipe polled by ZeroMQ for messages.
   n: This is the peer to peer node my chat app is connected as
   group: This is the peer chat group I wanted to join
+  # username = This is your username that we'll get from our get_username function
+  # node = I assume this is my peer computer node
   ```
   3. Note if the function **returns** anything. If it does, note what you believe it returns, and make a final note about what you believe the function may do.
   ```shell
